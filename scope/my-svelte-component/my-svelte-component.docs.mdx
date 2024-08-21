@@ -1,0 +1,46 @@
+---
+description: 'A svelte component with props - created with bit.'
+labels: ['svelte', 'hello world', 'environment']
+---
+import HelloWorld from './my-svelte-component.svelte';
+
+## Overview
+Basic Svelte component created with bit
+
+This is at its essence just a regular svelte component, so please review the [svelte docs](https://svelte.dev/docs/introduction) for details on svelte development
+
+#### Example
+
+In a `.svelte` file:
+
+```js
+// in .svelte file
+import MySvelteComponent from '@my-org/my-scope.namespace.my-svelte-component.svelte';
+
+<MySvelteComponent
+    name="some name"
+/>
+```
+
+In a `.ts` file:
+
+```js
+// in .js/ts file
+import MySvelteComponent from '@my-org/my-scope.namespace.my-svelte-component.svelte';
+
+const myComponent = new MySvelteComponent({
+  props: <some-props>,
+  target: root // any target dom element
+})
+
+// myComponent is the dom element produced when initiating the class. Now you can manipulate as required.
+
+```
+
+Live example
+
+```js live=true
+<HelloWorld 
+  name="some name"
+/>
+```
